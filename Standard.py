@@ -52,12 +52,12 @@ def voisin(i,j):
     return nb_voisin
 
 #Générer la nouvelle grille selon la fonction voisin(i,j)
-def generation_suivante() :
+def generation_suivante(old_grille) :
     global grille
-    new_grille = [[0 for _ in range(len(grille[0]))] for _ in range(len(grille))]
+    new_grille = old_grille
     for iCtr in range(len(grille)) :
         for jCtr in range(len(grille[0])) :
-            print("position:" + str(iCtr) + str(jCtr) + " nbr voisin:" + str(voisin(iCtr,jCtr)))
+            #print("[" + str(iCtr) + "][" + str(jCtr) + "] voisin:" + str(voisin(iCtr,jCtr)))
             nb_voisin = voisin(iCtr,jCtr)
             position = grille[iCtr][jCtr]
             if position == 1 :
@@ -90,7 +90,7 @@ def update(frames):
     # Récupère les données
     old_grille = im.get_array()
     # calcule la génération suivante
-    grille = generation_suivante()
+    grille = generation_suivante(old_grille)
     # Réassigne les nouvelles données
     im.set_array(grille)
     return [im]
