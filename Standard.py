@@ -57,7 +57,8 @@ def generation_suivante(old_grille) :
     new_grille = old_grille
     for iCtr in range(len(grille)) :
         for jCtr in range(len(grille[0])) :
-            #print("[" + str(iCtr) + "][" + str(jCtr) + "] voisin:" + str(voisin(iCtr,jCtr)))
+            print("------\nAncienne valeur:" + str(new_grille[iCtr][jCtr]))
+            print("[" + str(iCtr) + "][" + str(jCtr) + "] voisin:" + str(voisin(iCtr,jCtr)))
             nb_voisin = voisin(iCtr,jCtr)
             position = grille[iCtr][jCtr]
             if position == 1 :
