@@ -12,8 +12,6 @@ MODE_NEURAL = 1
 
 mode = MODE_STANDARD
 
-# Est ce que la grille doit être 100 x 100? Est ce qu'on doit utiliser un array, doit-on considérer que les cases en bordures compte l'autres côté?
-#Doit-on générer aléatoirement les cases?
 grille  = [[0,0,0,0,0,0,1,0,0,0,0,0,0],
            [0,0,0,0,0,0,1,0,0,0,0,0,0],
            [0,0,0,0,1,1,0,1,1,0,0,0,0],
