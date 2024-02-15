@@ -50,7 +50,7 @@ while SCORE < 0.5 :
     #print(y_test)
 
     # Créer le modèle MLPRegressor nommé mlp, 1 couche cachée avec 8 neurones. Reproductible, Maximum 1000 itérations d'apprentissage.
-    mlp = MLPRegressor(hidden_layer_sizes=1, solver='lbfgs', max_iter=1000, learning_rate_init=0.001)
+    mlp = MLPRegressor(hidden_layer_sizes=1, solver='lbfgs', max_iter=1000, learning_rate_init=0.0001)
 
     # Entraîner le modèle sur les données d'entraînement
     mlp.fit(X_train,y_train)
